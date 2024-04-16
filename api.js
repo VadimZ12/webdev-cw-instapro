@@ -26,11 +26,11 @@ export function getPosts({ token }) {
     });
 }
 
-export function getUserPosts({ data, token }) {
+export function getUserPosts({ data }) {
   return fetch(postsHost + `/user-posts/${data.userId}`, {
     method: "GET",
     headers: {
-      Authorization: token,
+      Authorization: getToken(),
     },
   })
   .then((response) => {
@@ -141,8 +141,7 @@ export function addPost({ description, imageUrl }) {
       {
         description,
         imageUrl,
-      }
-    ),
+      }),
     headers: {
       Authorization: getToken(),
     },

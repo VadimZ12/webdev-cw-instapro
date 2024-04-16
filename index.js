@@ -30,6 +30,7 @@ export const getToken = () => {
   return token;
 };
 
+
 export const logout = () => {
   user = null;
   removeUserFromLocalStorage();
