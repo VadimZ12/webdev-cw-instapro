@@ -114,7 +114,7 @@ export function like({ posts, index }) {
 // записываем снятие лайка и получаем данные
 
 export function disLike({ posts, index }) {
-  return fetch(postsHost + `/${posts[index].id}/disLike`, {
+  return fetch(postsHost + `/${posts[index].id}/dislike`, {
     method: "POST",
     body: JSON.stringify(
       {
